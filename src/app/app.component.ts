@@ -9,5 +9,12 @@ export class AppComponent {
   title = 'app works!';
 
   keyword: string;
-  
+
+  doSearch($event: MouseEvent, input: HTMLInputElement) {
+    // Method 1
+    // $event.target
+
+    // Method 2
+    this.keyword = input.value;
+  }
 }
