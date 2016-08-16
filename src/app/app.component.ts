@@ -10,11 +10,17 @@ export class AppComponent {
 
   keyword: string;
 
-  doSearch($event: MouseEvent, input: HTMLInputElement) {
+  doSearch($event: MouseEvent|KeyboardEvent, input: HTMLInputElement) {
     // Method 1
     // $event.target
 
     // Method 2
-    this.keyword = input.value;
+    if($event instanceof MouseEvent) {
+      this.keyword = input.value;
+    }
+
+    if($event instanceof KeyboardEvent && $event.keyCode == 13) {
+      this.keyword = input.value;
+    }
   }
 }
