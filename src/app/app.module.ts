@@ -10,6 +10,7 @@ import { MvpComponent } from './mvp/mvp.component';
 import { ArticleComponent } from './article/article.component';
 import { SearchComponent } from './search/search.component';
 import { SearchService } from './search.service';
+import { HttpModule } from '@angular/http';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { SearchService } from './search.service';
   imports: [
     BrowserModule,
     CommonModule,
-    FormsModule
+    FormsModule,
+    HttpModule
   ],
   providers: [SearchService],
   entryComponents: [AppComponent],
