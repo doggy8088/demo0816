@@ -4,11 +4,17 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
+import { CalendarComponent } from './calendar/calendar.component';
+import { CatlistComponent } from './catlist/catlist.component';
+import { MvpComponent } from './mvp/mvp.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent
+    HeaderComponent,
+    CalendarComponent,
+    CatlistComponent,
+    MvpComponent
   ],
   imports: [
     BrowserModule,
