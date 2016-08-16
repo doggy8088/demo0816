@@ -7,6 +7,7 @@ import { HeaderComponent } from './header/header.component';
 import { CalendarComponent } from './calendar/calendar.component';
 import { CatlistComponent } from './catlist/catlist.component';
 import { MvpComponent } from './mvp/mvp.component';
+import { ArticleComponent } from './article/article.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { MvpComponent } from './mvp/mvp.component';
     HeaderComponent,
     CalendarComponent,
     CatlistComponent,
-    MvpComponent
+    MvpComponent,
+    ArticleComponent
   ],
   imports: [
     BrowserModule,
