@@ -49,14 +49,14 @@
         </div>
         <!-- Search END -->
 
-        <div [ngSwitch]="keyword">
-          <div *ngSwitchCase="'1'">
+        <div [ngSwitch]="toInt(keyword)">
+          <div *ngSwitchCase="1">
             <app-calendar></app-calendar>
           </div>
-          <div *ngSwitchCase="'2'">
+          <div *ngSwitchCase="2">
             <app-catlist></app-catlist>
           </div>
-          <div *ngSwitchCase="'3'">
+          <div *ngSwitchCase="3">
             <app-mvp></app-mvp>
           </div>
           <div *ngSwitchDefault>
