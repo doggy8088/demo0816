@@ -50,18 +50,10 @@
         <!-- Search END -->
 
         <div [ngSwitch]="toInt(keyword)">
-          <div *ngSwitchCase="1">
-            <app-calendar></app-calendar>
-          </div>
-          <div *ngSwitchCase="2">
-            <app-catlist></app-catlist>
-          </div>
-          <div *ngSwitchCase="3">
-            <app-mvp></app-mvp>
-          </div>
-          <div *ngSwitchDefault>
-            N/A
-          </div>
+          <app-calendar *ngSwitchCase="1"></app-calendar>
+          <app-catlist *ngSwitchCase="2"></app-catlist>
+          <app-mvp *ngSwitchCase="3"></app-mvp>
+          <div *ngSwitchDefault>N/A</div>
         </div>
 
       </div>
