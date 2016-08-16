@@ -6,7 +6,7 @@ export class SearchService {
 
   constructor(private http: Http) {
     http.get('/api/articles.json').subscribe(value => {
-      this.data = value.json();
+      this.data = this.default_data = value.json();
     });
   }
 
@@ -14,8 +14,8 @@ export class SearchService {
 
   doSearch(keyword: string) {
     this.keyword = keyword;
-    this.http.get('/api/articles.json?search='+keyword).subscribe(value => {
-      this.data = value.json();
+    this.data = this.default_data.filter(value => {
+      return value.title.toLowerCase().indexOf(keyword.toLowerCase()) > -1;
     });
   }
 
@@ -23,5 +23,6 @@ export class SearchService {
     this.data.splice(this.data.indexOf(item), 1);
   }
 
+  default_data: any;
   data: any;
 }
