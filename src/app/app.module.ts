@@ -8,6 +8,8 @@ import { CalendarComponent } from './calendar/calendar.component';
 import { CatlistComponent } from './catlist/catlist.component';
 import { MvpComponent } from './mvp/mvp.component';
 import { ArticleComponent } from './article/article.component';
+import { SearchComponent } from './search/search.component';
+import { SearchService } from './search.service';
 
 @NgModule({
   declarations: [
@@ -16,14 +18,15 @@ import { ArticleComponent } from './article/article.component';
     CalendarComponent,
     CatlistComponent,
     MvpComponent,
-    ArticleComponent
+    ArticleComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,
     CommonModule,
     FormsModule
   ],
-  providers: [],
+  providers: [SearchService],
   entryComponents: [AppComponent],
   bootstrap: [AppComponent]
 })

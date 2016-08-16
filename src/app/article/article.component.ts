@@ -1,4 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { SearchService } from '../search.service';
 
 @Component({
   selector: 'app-article',
@@ -9,15 +10,9 @@ export class ArticleComponent implements OnInit {
 
   @Input() item: any;
 
-  @Output() delete = new EventEmitter();
-
-  constructor() { }
+  constructor(private searchsvc: SearchService) { }
 
   ngOnInit() {
-  }
-
-  del() {
-    this.delete.emit(this.item);
   }
 
 }
