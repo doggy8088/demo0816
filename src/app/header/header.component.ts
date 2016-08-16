@@ -19,9 +19,13 @@ export class HeaderComponent implements OnInit {
   ngOnInit() {
   }
 
-  plusOne(evt) {
+  plusOne(evt: MouseEvent) {
     console.log(evt);
-    this.num++;
+    if(evt.ctrlKey || evt.metaKey) {
+      this.num--;
+    } else {
+      this.num++;
+    }
   }
 
 }
