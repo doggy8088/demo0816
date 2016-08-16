@@ -20,6 +20,10 @@ export class AppComponent {
     return parseInt(str, 10);
   }
 
+  deleteArticle(item) {
+    this.data.splice(this.data.indexOf(item), 1);
+  }
+
   data = [
     {
       "href": "http://blog.miniasp.com/post/2016/04/30/Visual-Studio-Code-from-Command-Prompt-notes.aspx",
