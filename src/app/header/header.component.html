@@ -31,6 +31,8 @@
       <hgroup class="pull-left">
         <h1><a [href]="titleurl">{{title}}</a></h1>
         <h3 (click)="plusOne($event)"
+            [ngClass]="{'red': (num%2==1)}"
+            [ngStyle]="{'font-size': num+'px'}"
             [innerHTML]="subtitle + ' +' + num"></h3>
       </hgroup>
       <div id="social-icons" class="pull-right social-icon">
